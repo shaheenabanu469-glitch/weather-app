@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Search & Control Panel -->
+        <div class="search-section">
+            <h1>🌤️ WeatherHub Pro</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Search city (e.g., Mangaluru, London)...">
+                <button onclick="getWeather()"><i class="fa-solid fa-search"></i></button>
+                <button class="geo-btn" onclick="getLocationWeather()" title="Use Current Location"><i class="fa-solid fa-location-crosshairs"></i></button>
+            </div>
+            <div id="favorites-container" class="favorites">
+                <!-- Recent searches populated via JS -->
+            </div>
+        </div>
+
+        <!-- Main Display Content -->
+        <div id="weather-display" class="weather-display hidden">
+            <div class="current-weather">
+                <div class="weather-left">
+                    <h2 id="city-name">City, Country</h2>
+                    <p id="current-date">Date</p>
+                    <div class="temp-large"><span id="temperature">--</span>°C</div>
+                    <p id="description">Condition</p>
+                </div>
+                <div class="weather-right">
+                    <div class="stat-item"><i class="fa-solid fa-droplet"></i> Humidity: <span id="humidity">--%</span></div>
+                    <div class="stat-item"><i class="fa-solid fa-wind"></i> Wind Speed: <span id="wind">-- km/h</span></div>
+                    <div class="stat-item"><i class="fa-solid fa-gauge"></i> Pressure: <span id="pressure">-- hPa</span></div>
+                </div>
+            </div>
+
+            <!-- Forecast Section -->
+            <div class="forecast-section">
+                <h3>📅 3-Day Forecast</h3>
+                <div id="forecast-grid" class="forecast-grid">
+                    <!-- Forecast cards injected here -->
+                </div>
+            </div>
+        </div>
+
+        <p id="error-message" class="error hidden">Could not fetch weather data. Please check the city name.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background: linear-gradient(135deg, #0f172a, #1e293b); color: #f8fafc; min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+.dashboard-container { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); width: 100%; max-width: 650px; padding: 30px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+h1 { font-size: 1.8rem; color: #38bdf8; text-align: center; margin-bottom: 20px; }
+.search-box { display: flex; gap: 10px; margin-bottom: 15px; }
+input { flex: 1; padding: 12px 18px; border-radius: 12px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 1rem; outline: none; }
+input:focus { border-color: #38bdf8; }
+button { padding: 0 18px; border-radius: 12px; border: none; background: #38bdf8; color: #0f172a; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+button:hover { background: #0ea5e9; }
+.geo-btn { background: #334155; color: #38bdf8; }
+.geo-btn:hover { background: #475569; }
+.favorites { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.chip { background: #334155; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; transition: background 0.2s; }
+.chip:hover { background: #38bdf8; color: #0f172a; }
+.weather-display { margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+.current-weather { display: flex; justify-content: space-between; align-items: center; background: rgba(15, 23, 42, 0.5); padding: 20px; border-radius: 16px; margin-bottom: 25px; }
+.temp-large { font-size: 3.5rem; font-weight: bold; color: #f1f5f9; margin: 5px 0; }
+.weather-right { display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #94a3b8; text-align: right; }
+.forecast-section h3 { margin-bottom: 12px; font-size: 1.2rem; color: #38bdf8; }
+.forecast-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.forecast-card { background: rgba(15, 23, 42, 0.5); padding: 15px; border-radius: 12px; text-align: center; }
+.forecast-card h4 { font-size: 0.9rem; color: #94a3b8; margin-bottom: 6px; }
+.forecast-card p { font-size: 1rem; font-weight: bold; margin-top: 6px; }
+.hidden { display: none; }
+.error { color: #f87171; text-align: center; margin-top: 15px; }
+@media (max-width: 600px) { .current-weather { flex-direction: column; text-align: center; gap: 15px; } .weather-right { text-align: center; } .forecast-grid { grid-template-columns: 1fr; } }
